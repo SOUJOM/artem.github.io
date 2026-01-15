@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лічильник кліків</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        #count {
+            font-size: 64px;
+            margin-bottom: 30px;
+        }
+
+        button {
+            font-size: 24px;
+            padding: 15px 40px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            background: #00ff88;
+            color: #000;
+            transition: transform 0.1s, background 0.2s;
+        }
+
+        button:hover {
+            background: #00cc6a;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Лічильник кліків</h1>
+    <div id="count">0</div>
+    <button onclick="addClick()">Клікни!</button>
+
+    <script>
+        let count = 0;
+
+        function addClick() {
+            count++;
+            document.getElementById("count").textContent = count;
+        }
+    </script>
+
+</body>
+</html>
